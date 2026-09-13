@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 model = joblib.load(os.path.join(BASE_DIR, 'KNN_heart.pkl'))
 scaler = joblib.load(os.path.join(BASE_DIR, 'scaler.pkl'))
-columns = joblib.load(os.path.join(BASE_DIR, 'columns.pkl'))
+expected_columns = joblib.load(os.path.join(BASE_DIR, 'columns.pkl'))
 # model=joblib.load('KNN_heart.pkl')
 # scaler=joblib.load('scaler.pkl')
 # expected_columns=joblib.load('columns.pkl')
