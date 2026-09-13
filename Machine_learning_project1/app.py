@@ -1,9 +1,17 @@
 import streamlit as st 
 import pandas as pd 
 import joblib 
-model=joblib.load('KNN_heart.pkl')
-scaler=joblib.load('scaler.pkl')
-expected_columns=joblib.load('columns.pkl')
+import os
+import joblib
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model = joblib.load(os.path.join(BASE_DIR, 'KNN_heart.pkl'))
+scaler = joblib.load(os.path.join(BASE_DIR, 'scaler.pkl'))
+columns = joblib.load(os.path.join(BASE_DIR, 'columns.pkl'))
+# model=joblib.load('KNN_heart.pkl')
+# scaler=joblib.load('scaler.pkl')
+# expected_columns=joblib.load('columns.pkl')
 st.title("Heart Stroke Prediction App")
 st.markdown("provide the following details to check your heart stroker risk:");
 # Collect user input
