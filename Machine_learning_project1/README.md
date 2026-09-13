@@ -1,0 +1,1 @@
+https://machinelearningmodel-heart-attack-prediction.streamlit.app/
